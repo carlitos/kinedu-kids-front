@@ -7,12 +7,14 @@ import { HomeComponent } from './components/home/home.component';
 
 // Routes
 import { routing } from './routing';
+import { ActivityLogsComponent } from './components/activity-logs/activity-logs.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ActivityLogsComponent
   ],
   imports: [
     BrowserModule,

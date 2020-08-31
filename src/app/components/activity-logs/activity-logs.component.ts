@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivityLogsService } from '../../services/activity-logs.service';
+declare var $: any;
 
 @Component({
   selector: 'app-activity-logs',
@@ -10,6 +11,7 @@ import { ActivityLogsService } from '../../services/activity-logs.service';
 export class ActivityLogsComponent implements OnInit {
 
   activity_logs:             any[] = [];
+  activity: any;
 
   constructor( public _activity_logs_service_yts: ActivityLogsService) {
     this._activity_logs_service_yts = _activity_logs_service_yts;
@@ -31,6 +33,18 @@ export class ActivityLogsComponent implements OnInit {
       return ;
     });
   }
+
+  closeModal() {
+    this.activity = null;
+     $('#myModal').modal( 'hide' );
+  }
+
+  getDetail ( activity: any ) {
+    this.activity = activity;
+    $('#myModal').modal();
+ }
+
+
 
 
 }

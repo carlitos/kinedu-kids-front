@@ -1,3 +1,24 @@
-<p>
-  activity-logs works!
-</p>
+<div class="row" id="jumbotron">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Bebé</th>
+        <th scope="col">Asistente</th>
+        <th scope="col">Actividad</th>
+        <th scope="col">Inicio</th>
+        <th scope="col">Estatus</th>
+        <th scope="col">Duración</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let activity of activity_logs">
+        <th scope="row">{{ activity.baby.name }}</th>
+        <td>{{ activity.assistant_name }}</td>
+        <td>{{ activity.activity.name }}</td> 
+        <td>{{ activity.start_time | date: 'yyyy-MM-dd mm:ss'  }}</td>
+        <td></td>
+        <td>{{ activity.duration_info }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

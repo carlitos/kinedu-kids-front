@@ -6,8 +6,8 @@
         <th scope="col">Asistente</th>
         <th scope="col">Actividad</th>
         <th scope="col">Inicio</th>
-        <th scope="col">Estatus</th>
         <th scope="col">Duración</th>
+        <th scope="col"></th>
       </tr>
     </thead>
     <tbody>
@@ -16,9 +16,60 @@
         <td>{{ activity.assistant_name }}</td>
         <td>{{ activity.activity.name }}</td> 
         <td>{{ activity.start_time | date: 'yyyy-MM-dd mm:ss'  }}</td>
-        <td></td>
         <td>{{ activity.duration_info }} </td>
+        <td>
+          
+          <button (click)="getDetail( activity )" type="button" class="btn btn-primary btn-xs btn-outlet-primary btn-block">
+            Detail
+          </button>
+  
+        </td>
       </tr>
     </tbody>
   </table>
 </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" 
+        tabindex="-1" 
+        role="dialog" 
+        aria-labelledby="exampleModalLabel" 
+        aria-hidden="true" 
+        data-backdrop="static"
+        data-keyboard="false" >
+        
+      <div class="modal-dialog" role="document">
+        
+        <div class="modal-content" *ngIf="activity">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"> </h5>
+          </div>
+          <div class="modal-body">             
+              
+
+              <div class="card">
+                <h5 class="card-header">Baby activity detail</h5>
+                <div class="card-body">
+                  <h5 class="card-title">Nombre del bebé: {{ activity.baby.name }}</h5>
+                  <p class="card-text">Nombre de la mamá: {{ activity.baby.mother_name }}</p>
+                  <p class="card-text">Nombre de la actividad: {{ activity.activity.name }}</p>
+                  <p class="card-text">Descripción de la actividad: {{ activity.activity.description }}</p>
+                  <p class="card-text">Duración de la actividad: {{ activity.duration_info }}</p>
+                </div>
+              </div>
+
+
+          </div>
+          <div class="modal-footer">
+            <button (click)="closeModal()"
+              type="button" class="btn btn-secondary ">Cerrar</button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+

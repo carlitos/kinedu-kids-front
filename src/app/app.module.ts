@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+
 
 // Components
 import { AppComponent } from './app.component';
@@ -18,7 +20,8 @@ import { ActivityLogsComponent } from './components/activity-logs/activity-logs.
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    HttpModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]

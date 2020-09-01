@@ -1,0 +1,18 @@
+<div class="row" id="jumbotron">
+  <table class="table" style="background-color: white;">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let activity of activities">
+        <th scope="row">{{ activity.name }}</th>
+        <td>{{ activity.description }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

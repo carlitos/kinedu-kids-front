@@ -15,6 +15,8 @@ export class ActivityLogsService {
 
   private activityLogs = environment.backend + 'api/v1/activity_logs';
   private babiesEndpoint = environment.backend + 'api/v1/babies';
+  private activitiesEndpoint = environment.backend + 'api/v1/activities';
+  
 
   getAllActivityLogs()  {
     return this.http.get(this.activityLogs).pipe(
@@ -24,6 +26,12 @@ export class ActivityLogsService {
 
   getAllBabies()  {
     return this.http.get(this.babiesEndpoint).pipe(
+    map(( response: Response ) => response.json()))
+    .toPromise();
+  }
+
+  getAllActivities()  {
+    return this.http.get(this.activitiesEndpoint).pipe(
     map(( response: Response ) => response.json()))
     .toPromise();
   }

@@ -11,6 +11,7 @@ import { HomeComponent } from './components/home/home.component';
 import { routing } from './routing';
 import { ActivityLogsComponent } from './components/activity-logs/activity-logs.component';
 import { BabiesComponent } from './components/babies/babies.component';
+import { ActivitiesComponent } from './components/activities/activities.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { BabiesComponent } from './components/babies/babies.component';
     AppComponent,
     HomeComponent,
     ActivityLogsComponent,
-    BabiesComponent
+    BabiesComponent,
+    ActivitiesComponent
   ],
   imports: [
     BrowserModule,

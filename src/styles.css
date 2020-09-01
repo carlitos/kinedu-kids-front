@@ -7,3 +7,7 @@
 #logo{
   max-width: 140px;
 }
+
+body{
+  background: url(assets/back-footer.png) bottom left no-repeat fixed;
+}

@@ -12,6 +12,7 @@ import { routing } from './routing';
 import { ActivityLogsComponent } from './components/activity-logs/activity-logs.component';
 import { BabiesComponent } from './components/babies/babies.component';
 import { ActivitiesComponent } from './components/activities/activities.component';
+import { AssistantsComponent } from './components/assistants/assistants.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ActivitiesComponent } from './components/activities/activities.componen
     HomeComponent,
     ActivityLogsComponent,
     BabiesComponent,
-    ActivitiesComponent
+    ActivitiesComponent,
+    AssistantsComponent
   ],
   imports: [
     BrowserModule,

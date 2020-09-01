@@ -1,0 +1,14 @@
+<div class="row" id="jumbotron">
+  
+  <div *ngFor="let assistant of assistants" class="card" style="width: 18rem; margin-right: 20px; margin-bottom: 20px;">
+    <img src="../../../assets/child.png" class="card-img-top" style="max-width: 250px;" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{ assistant.name }}</h5>
+      <p class="card-text"><strong>Grupo: </strong> {{ assistant.group }}</p>
+      <p class="card-text"><strong>Dirección: </strong> {{ assistant.address }}</p>
+      <p class="card-text"><strong>Teléfono: </strong> {{ assistant.phone }}</p>
+    </div>
+  </div>
+
+  
+</div>
